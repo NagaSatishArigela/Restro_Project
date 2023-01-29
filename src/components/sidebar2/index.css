@@ -1,0 +1,28 @@
+.side {
+  height: auto;
+  width: 180px;
+  background-color: #000;
+  display: flex;
+}
+.sideList {
+  color: #fff;
+}
+.menuList {
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+  .iconView {
+    display: block;
+  }
+  .listView {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .side {
+    grid-template-columns: 10% 50% auto;
+    overflow-y: scroll;
+    width: 60px;
+  }
+}

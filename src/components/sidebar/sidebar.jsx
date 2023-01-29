@@ -5,9 +5,9 @@ import { UilSignOutAlt } from "@iconscout/react-unicons";
 import { SidebarData } from "../../Data/data";
 import { UilBars } from "@iconscout/react-unicons";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({children}) => {
   const [selected, setSelected] = useState(0);
 
   const [expanded, setExpaned] = useState(true);
@@ -46,22 +46,25 @@ const Sidebar = () => {
         <div className="menu">
           {SidebarData.map((item, index) => {
             return (
-              <div
+              <NavLink
                 className={selected === index ? "menuItem active" : "menuItem"}
                 key={index}
                 onClick={() => setSelected(index)}
+                to={item.path}
               >
                 <item.icon />
                 <span>{item.heading}</span>
-              </div>
+              </NavLink>
             );
           })}
           {/* signoutIcon */}
           <div className="menuItem">
             <UilSignOutAlt />
+            <span>Sign Out</span>
           </div>
         </div>
       </motion.div>
+      {children}
     </>
   );
 };

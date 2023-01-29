@@ -16,27 +16,27 @@ import {
     {
       icon: UilEstate,
       heading: "Dashboard",
-      route: "/"
+      path: "/"
     },
     {
       icon: UilClipboardAlt,
       heading: "Orders",
-      route: "/contacts"
+      path: "/contacts"
     },
     {
       icon: UilUsersAlt,
       heading: "Customers",
-      route: "/c"
+      path: "/c"
     },
     {
       icon: UilPackage,
       heading: 'Products',
-      route: "/p"
+      path: "/p"
     },
     {
       icon: UilChart,
       heading: 'Analytics',
-      route: "/a"
+      path: "/a"
     },
   ];
   

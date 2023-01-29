@@ -1,8 +1,9 @@
 import React from 'react'
+import Table from "../components/table/table"
 
 const Contacts = () => {
   return (
-    <div>contacts</div>
+    <div><Table/></div>
   )
 }
 
